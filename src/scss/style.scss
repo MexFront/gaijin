@@ -1,0 +1,18 @@
+//Add font
+@import url('/fonts/fonts.css');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Fira Sans', sans-serif;
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1270px;
+  padding: 0 16px;
+}
