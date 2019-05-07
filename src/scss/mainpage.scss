@@ -1,5 +1,45 @@
 .page {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
+  background: url('/images/background.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 50px)
+  }
+
+  &__language {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.content {
+  position: relative;
+
+  &__tank {
+    background: url('/images/tank_tower.png');
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 200px);
+    z-index: 2;
+  }
 }

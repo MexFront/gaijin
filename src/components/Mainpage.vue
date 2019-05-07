@@ -1,7 +1,16 @@
 <template>
 <div class='page'>
-  <section class='page__content'>
-
+  <header class ='header'>
+    <div class='header__logo'>
+      <img src='/images/war-thunder_logo.png' alt='War Thunder' />
+    </div>
+    <div class='header__language'>language</div>
+  </header>
+  <section class='content'>
+    <div class='content__tank'></div>
+    <div class='content__header'>
+      <img src='/images/header_ru.png' alt='free starter pack' />
+    </div>
   </section>
 </div>
 
