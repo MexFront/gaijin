@@ -1,23 +1,23 @@
 <template>
 <div class='page'>
   <div class='page__tank'></div>
-  <div class='page__logo'><img src='images/gaijin-logo.png' alt='Gaijin' /></div>
-  <div class='page__pegi'><img src='images/pegi.png' alt='Pegi info' /></div>
+  <div class='page__logo'><img src='/images/gaijin-logo.png' alt='Gaijin' /></div>
+  <div class='page__pegi'><img src='/images/pegi.png' alt='Pegi info' /></div>
   <header class ='header'>
     <div class='header__logo'>
-      <img src='images/war-thunder_logo.png' alt='War Thunder' />
+      <img src='/images/war-thunder_logo.png' alt='War Thunder' />
     </div>
     <div class='header__language'>
       <ul class="header__languagepicker">
-        <a href="#ru"><li><img src="images/russia-flag-icon-32.png"/></li></a>
-        <a href="#tr"><li><img src="images/turkey-flag-icon-32.png"/></li></a>
+        <a href="#ru"><li><img src="/images/russia-flag-icon-32.png"/></li></a>
+        <a href="#tr"><li><img src="/images/turkey-flag-icon-32.png"/></li></a>
       </ul>
     </div>
   </header>
   <main class='content'>
     <div class='content__header'>
-      <img class='content__header-img-big' src='images/header_ru.png' alt='free starter pack' />
-      <img class='content__header-img-sm' src='images/header_ru_m.png' alt='free starter pack' />
+      <img class='content__header-img-big' src='/images/header_ru.png' alt='free starter pack' />
+      <img class='content__header-img-sm' src='/images/header_ru_m.png' alt='free starter pack' />
     </div>
     <div class='content__bonuses'>
       <h2 class='content__bonuses-header'>Выберите ваш
@@ -31,7 +31,7 @@
             <div class='content__bonuses-airplane-bonus _font_yellow'>+3 дня премиума</div>
           </div>
           <div class='content__bonuses-airplane-container'>
-            <img src='images/f2a-1-buffalo.png'
+            <img src='/images/f2a-1-buffalo.png'
               class='content__bonuses-airplane-img'
               alt='F2a-1-buffalo' />
           </div>
@@ -46,7 +46,7 @@
             <div class='content__bonuses-tank-bonus _font_yellow'>+3 дня премиума</div>
           </div>
           <div class='content__bonuses-tank-container'>
-            <img src='images/light-tank-m2a4.png'
+            <img src='/images/light-tank-m2a4.png'
               class='content__bonuses-tank-img'
               alt='light-tank-m2a4' />
           </div>
@@ -100,20 +100,20 @@ export default {
     return {
       gallery: [
         {
-          preview: 'images/gallery/1.jpg',
-          full: 'images/gallery/1-big.jpg',
+          preview: '/images/gallery/1.jpg',
+          full: '/images/gallery/1-big.jpg',
           id: 1,
           description: 'first',
         },
         {
-          preview: 'images/gallery/2.jpg',
-          full: 'images/gallery/2-big.jpg',
+          preview: '/images/gallery/2.jpg',
+          full: '/images/gallery/2-big.jpg',
           id: 2,
           description: 'second',
         },
         {
-          preview: 'images/gallery/3.jpg',
-          full: 'images/gallery/3-big.jpg',
+          preview: '/images/gallery/3.jpg',
+          full: '/images/gallery/3-big.jpg',
           id: 3,
           description: 'third',
         },
