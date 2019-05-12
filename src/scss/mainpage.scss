@@ -1,11 +1,43 @@
+@keyframes translating {
+  0%   { transform: translate(-50%, 100%); }
+  100% { transform: translate(-50%, 0); }
+}
+
+@keyframes translating-mobile {
+  0%   { transform: translate(0, 100%); }
+  100% { transform: translate(0, 0); }
+}
+
 .page {
-  height: 100vh;
-  background: url('/images/background.jpg');
-  background-position: center;
+  background: url('/images/tank_tower.png') no-repeat center center fixed;
   background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+
+  &__logo {
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+  }
+
+  &__pegi {
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+  }
+
+  &__modal img {
+    width: 100%;
+  }
+
+  &__modal .modal-container {
+    width: 100%;
+  }
 }
 
 .header {
+  height: 200px;
 
   &__logo {
     position: absolute;
@@ -19,27 +51,343 @@
     right: 0;
     top: 0;
   }
+
+  &__languagepicker {
+    background-color: #000000;
+    display: inline-block;
+    padding: 0;
+    height: 30px;
+    overflow: hidden;
+    transition: all .3s ease;
+    margin: 0 6px 10px 0;
+    vertical-align: top;
+  }
+
+  &__languagepicker:hover {
+    height: 65px;
+  }
+
+  &__languagepicker a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  &__languagepicker li {
+    display: block;
+    padding: 5px 0 0 6px;
+    line-height: 30px;
+    border-top: 1px solid #e2e2e2;
+  }
+
+  &__languagepicker li:hover{
+    color: #ffffff;
+  }
+
+  &__languagepicker a:first-child li {
+    border: none;
+    background: #000000 !important;
+  }
+
+  &__languagepicker li img {
+    margin-right: 5px;
+  }
 }
 
 .content {
+  height: 400px;
   position: relative;
-
-  &__tank {
-    background: url('/images/tank_tower.png');
-    background-position: center;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    z-index: 3;
-  }
 
   &__header {
     position: absolute;
-    top: 0;
+    top: 24px;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, 200px);
-    z-index: 2;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    animation: translating 1s linear;
+  }
+
+  &__header-img-big {
+    display: block;
+  }
+
+  &__header-img-sm {
+    display: none;
+  }
+
+  &__bonuses {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 170px);
+  }
+
+  &__bonuses-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bonuses-header {
+    color: #ffffff;
+    font-size: 32px;
+    margin: 0;
+    padding-bottom: 28px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__bonuses-airplane,
+  &__bonuses-tank {
+    background-size: cover;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 127px;
+    width: 418px;
+    padding: 28px;
+    position: relative;
+    border: 1px solid;
+    border-image: linear-gradient(45deg, rgba(226, 90, 0, 0.65), rgba(255, 168, 0, 0.65)) 1;
+  }
+
+  &__bonuses-airplane {
+    background: url('/images/bg_block_airplane.png');
+  }
+  &__bonuses-tank {
+    background: url('/images/bg_block_tank.png');
+  }
+
+  &__bonuses-airplane-name,
+  &__bonuses-airplane-model,
+  &__bonuses-tank-name,
+  &__bonuses-tank-model {
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__bonuses-airplane-model,
+  &__bonuses-tank-model {
+    font-size: 26px;
+    padding-bottom: 10px;
+  }
+
+  &__bonuses-airplane-bonus,
+  &__bonuses-tank-bonus {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__bonuses-airplane-img {
+    position: absolute;
+    right: -70px;
+    top: 0;
+    width: auto;
+  }
+
+  &__bonuses-tank-img {
+    position: absolute;
+    right: -50px;
+    top: -45px;
+    width: auto;
+  }
+
+  &__bonuses-star {
+    background: url('/images/icon_or.png');
+    background-size: cover;
+    height: 88px;
+    margin: 0 32px;
+    width: 96px;
+  }
+
+  &__bonuses-star-text {
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  &__bonuses-airplane:hover,
+  &__bonuses-tank:hover {
+    transform: scale(1.05);
+    transition: transform .5s ease;
+  }
+
+  &__gallery {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 280px);
+
+    img {
+      max-width: 90px;
+    }
+  }
+
+  &__gallery-sm {
+    display: none;
+  }
+
+  &__gallery-preview {
+    cursor: pointer;
+    margin: 0 5px;
+    border: 2px solid transparent;
+  }
+
+  &__gallery-preview:hover {
+    border: 2px solid;
+    border-image: linear-gradient(0deg, rgba(226, 90, 0, 0.65), rgba(255, 168, 0, 0.65)) 1;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &__link {
+    color: #ffffff;
+    opacity: 0.5;
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 1219px) {
+
+  .page {
+    background: none;
+  }
+
+  .header {
+    &__logo {
+      transform: translate(-50%, 30px)
+    }
+  }
+
+  .content {
+    height: auto;
+
+    &__header {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin: 0 auto;
+      transform: none;
+      animation: translating-mobile 1s linear;
+      z-index: 1;
+    }
+
+    &__header-img-big {
+      display: none;
+    }
+
+    &__header-img-sm {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__bonuses,
+    &__gallery {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      transform: none;
+      margin: 0;
+    }
+
+    &__bonuses-container {
+      justify-content: center;
+    }
+
+    &__bonuses-tank,
+    &__bonuses-airplane {
+      background: url('/images/glow.png') no-repeat center, rgba(0,0,0,0.7);
+      border-radius: 3px;
+      padding: 10px;
+      height: 220px;
+      width: 140px;
+      z-index: 3;
+    }
+
+    &__bonuses-airplane {
+      margin-right: 5px;
+    }
+
+    &__bonuses-tank {
+      margin-left: 5px;
+    }
+
+    &__bonuses-airplane-name,
+    &__bonuses-airplane-model,
+    &__bonuses-tank-name,
+    &__bonuses-tank-model {
+      color: #ffffff;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    &__bonuses-airplane-model,
+    &__bonuses-tank-model {
+      font-size: 20px;
+      padding-bottom: 4px;
+    }
+
+    &__bonuses-tank-img,
+    &__bonuses-airplane-img {
+      position: absolute;
+      right: 0;
+      top: 70px;
+      width: 120px;
+    }
+
+    &__bonuses-airplane-img {
+      top: 70px;
+    }
+
+    &__bonuses-airplane-bonus,
+    &__bonuses-tank-bonus {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 700;
+      position: absolute;
+      bottom: 30px;
+      left: 4px;
+    }
+
+    &__bonuses-star {
+      display: none;
+    }
+
+    &__gallery {
+      justify-content: center;
+    }
+
+    &__gallery-sm {
+      display: block;
+      color: #ffffff;
+      font-size: 24px;
+      margin: 0;
+      padding: 28px 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 100px;
+    flex-wrap: wrap;
   }
 }
