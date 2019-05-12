@@ -1,11 +1,11 @@
 <template>
 <div class='page'>
   <div class='page__tank'></div>
-  <div class='page__logo'><img src='/images/gaijin-logo.png' alt='Gaijin' /></div>
-  <div class='page__pegi'><img src='/images/pegi.png' alt='Pegi info' /></div>
+  <div class='page__logo'><img src='images/gaijin-logo.png' alt='Gaijin' /></div>
+  <div class='page__pegi'><img src='images/pegi.png' alt='Pegi info' /></div>
   <header class ='header'>
     <div class='header__logo'>
-      <img src='/images/war-thunder_logo.png' alt='War Thunder' />
+      <img src='images/war-thunder_logo.png' alt='War Thunder' />
     </div>
     <div class='header__language'>
       <ul class="header__languagepicker">
@@ -16,8 +16,8 @@
   </header>
   <main class='content'>
     <div class='content__header'>
-      <img class='content__header-img-big' src='/images/header_ru.png' alt='free starter pack' />
-      <img class='content__header-img-sm' src='/images/header_ru_m.png' alt='free starter pack' />
+      <img class='content__header-img-big' src='images/header_ru.png' alt='free starter pack' />
+      <img class='content__header-img-sm' src='images/header_ru_m.png' alt='free starter pack' />
     </div>
     <div class='content__bonuses'>
       <h2 class='content__bonuses-header'>Выберите ваш
