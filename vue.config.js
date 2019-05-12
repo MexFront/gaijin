@@ -12,5 +12,5 @@ module.exports = {
       },
     },
   },
-  publicPath: '/gaijin/',
+  publicPath: '/gaijin-landing/',
 }
